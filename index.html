@@ -82,6 +82,11 @@
             background-color: #F44336;
         }
         
+        .go-back-btn {
+            background-color: #607D8B;
+            margin-top: 15px;
+        }
+        
         .result-message {
             font-size: 20px;
             margin: 30px 0;
@@ -143,6 +148,10 @@
             max-width: 95%;
         }
         
+        .exit-option {
+            background-color: #9E9E9E;
+        }
+        
         @media (max-width: 360px) {
             .container {
                 width: 98%;
@@ -183,6 +192,7 @@
             <div class="result-message happy-message">Really?????</div>
             <div class="result-message">Then I'll chat you when!</div>
             <button onclick="showCard('card2')">Continue</button>
+            <button class="go-back-btn" onclick="showCard('card1')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -214,6 +224,7 @@
                 <button onclick="showCard('food-response')">Food</button>
                 <button onclick="showCard('shopping-response')">Shopping</button>
             </div>
+            <button class="go-back-btn" onclick="showCard('yes-response')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -239,6 +250,7 @@
             </div>
             
             <button onclick="showCard('card3')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card2')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -264,6 +276,7 @@
             </div>
             
             <button onclick="showCard('card3')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card2')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -289,6 +302,7 @@
             </div>
             
             <button onclick="showCard('card3')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card2')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -314,6 +328,7 @@
             </div>
             
             <button onclick="showCard('card3')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card2')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -325,6 +340,7 @@
                 <button onclick="showCard('weekday-response')">Weekday</button>
                 <button onclick="showCard('weekend-response')">Weekend</button>
             </div>
+            <button class="go-back-btn" onclick="goBackToDateType()">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -334,6 +350,7 @@
             <div class="emoji">📅</div>
             <div class="result-message">Weekday works for me! Less crowded too.</div>
             <button onclick="showCard('card4')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card3')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -343,6 +360,7 @@
             <div class="emoji">🌞</div>
             <div class="result-message">Weekend it is! We'll have more time to enjoy.</div>
             <button onclick="showCard('card4')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card3')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -354,6 +372,7 @@
                 <button onclick="showCard('train-response')">Train</button>
                 <button onclick="showCard('car-response')">Car</button>
             </div>
+            <button class="go-back-btn" onclick="goBackToDay()">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -363,6 +382,7 @@
             <div class="emoji">🚆</div>
             <div class="result-message">Train is convenient! Obu to Nagoya Station is only about 20 minutes on the JR Tokaido Line.</div>
             <button onclick="showCard('card5')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card4')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -372,6 +392,7 @@
             <div class="emoji">🚗</div>
             <div class="result-message">Driving works too! It's about 30 minutes from Obu to central Nagoya, depending on traffic.</div>
             <button onclick="showCard('card5')">Next question</button>
+            <button class="go-back-btn" onclick="showCard('card4')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -382,7 +403,9 @@
             <div class="buttons">
                 <button onclick="showCard('final-yes')">Yes</button>
                 <button onclick="showCard('final-no')">No</button>
+                <button class="exit-option" onclick="showCard('exit-options')">Wait a minute...</button>
             </div>
+            <button class="go-back-btn" onclick="goBackToTransport()">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -392,6 +415,8 @@
             <div class="emoji">😊</div>
             <div class="result-message happy-message">Great! I'll message you soon!</div>
             <div class="result-message">Looking forward to our date in Nagoya!</div>
+            <div class="result-message" style="color: #4CAF50; font-weight: bold;">I'll chat you when I'm free!</div>
+            <button class="go-back-btn" onclick="showCard('card5')">Go Back</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -401,6 +426,64 @@
             <div class="emoji">👍</div>
             <div class="result-message">No problem! Let me know if you change your mind.</div>
             <button class="change-mind" onclick="showCard('final-yes')">Actually, yes please!</button>
+            <button class="go-back-btn" onclick="showCard('card5')">Go Back</button>
+            <div class="credits">
+                This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
+            </div>
+        </div>
+        
+        <!-- New Exit Options Card -->
+        <div class="card" id="exit-options">
+            <div class="emoji">😅</div>
+            <div class="question">Wait, I just realized...</div>
+            <div class="buttons">
+                <button class="exit-option" onclick="showCard('busy-excuse')">I'm actually busy</button>
+                <button class="exit-option" onclick="showCard('different-date')">I want a different type of date</button>
+                <button class="exit-option" onclick="showCard('not-date')">This was a date?</button>
+                <button class="exit-option" onclick="showCard('april-fools')">April Fools!</button>
+            </div>
+            <button class="go-back-btn" onclick="showCard('card5')">Nevermind, go back</button>
+            <div class="credits">
+                This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
+            </div>
+        </div>
+        
+        <!-- Exit Option Results -->
+        <div class="card" id="busy-excuse">
+            <div class="emoji">📅</div>
+            <div class="result-message">Oh no! I just checked my calendar and I'm actually super busy these next few weeks. Maybe another time?</div>
+            <button class="go-back-btn" onclick="showCard('exit-options')">Go Back</button>
+            <button class="change-mind" onclick="showCard('card1')">Start Over</button>
+            <div class="credits">
+                This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
+            </div>
+        </div>
+        
+        <div class="card" id="different-date">
+            <div class="emoji">🤔</div>
+            <div class="result-message">I'm not really feeling these options. Could we think about something else entirely?</div>
+            <button class="go-back-btn" onclick="showCard('exit-options')">Go Back</button>
+            <button class="change-mind" onclick="showCard('card1')">Start Over</button>
+            <div class="credits">
+                This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
+            </div>
+        </div>
+        
+        <div class="card" id="not-date">
+            <div class="emoji">😳</div>
+            <div class="result-message">Wait, this was a date? I thought we were just hanging out as friends! I'm not ready for anything romantic right now.</div>
+            <button class="go-back-btn" onclick="showCard('exit-options')">Go Back</button>
+            <button class="change-mind" onclick="showCard('card1')">Start Over</button>
+            <div class="credits">
+                This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
+            </div>
+        </div>
+        
+        <div class="card" id="april-fools">
+            <div class="emoji">🎭</div>
+            <div class="result-message">Haha, April Fools! I was just playing along. I'm not actually available for dates right now.</div>
+            <button class="go-back-btn" onclick="showCard('exit-options')">Go Back</button>
+            <button class="change-mind" onclick="showCard('card1')">Start Over</button>
             <div class="credits">
                 This website is created by Harry and Lexy (a friend of mine) helped me fix some errors
             </div>
@@ -408,7 +491,26 @@
     </div>
 
     <script>
+        // Keep track of which date type was chosen
+        let chosenDateType = '';
+        let chosenDay = '';
+        let chosenTransport = '';
+        
         function showCard(cardId) {
+            // Track chosen paths for going back
+            if (cardId === 'outdoors-response' || cardId === 'cultural-response' || 
+                cardId === 'food-response' || cardId === 'shopping-response') {
+                chosenDateType = cardId;
+            }
+            
+            if (cardId === 'weekday-response' || cardId === 'weekend-response') {
+                chosenDay = cardId;
+            }
+            
+            if (cardId === 'train-response' || cardId === 'car-response') {
+                chosenTransport = cardId;
+            }
+            
             // Hide all cards
             let cards = document.getElementsByClassName('card');
             for (let i = 0; i < cards.length; i++) {
@@ -420,6 +522,31 @@
             
             // Scroll to top of card when changing
             window.scrollTo(0, 0);
+        }
+        
+        // Functions to go back to previous selections
+        function goBackToDateType() {
+            if (chosenDateType) {
+                showCard(chosenDateType);
+            } else {
+                showCard('card2');
+            }
+        }
+        
+        function goBackToDay() {
+            if (chosenDay) {
+                showCard(chosenDay);
+            } else {
+                showCard('card3');
+            }
+        }
+        
+        function goBackToTransport() {
+            if (chosenTransport) {
+                showCard(chosenTransport);
+            } else {
+                showCard('card4');
+            }
         }
         
         // Test mobile compatibility on load
